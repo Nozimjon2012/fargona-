@@ -1,0 +1,530 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Farg‘ona Tumani — Tarix va Tabiat Uyg‘unligi</title>
+    <meta
+      name="description"
+      content="Farg‘ona tumani turistik maskanlari, Chimyon tabiati, tarixiy meros va sayohat imkoniyatlarini kashf eting."
+    />
+    <meta
+      property="og:title"
+      content="Farg‘ona Tumani — Tarix va Tabiat Uyg‘unligi"
+    />
+    <meta
+      property="og:description"
+      content="Farg‘ona tumani turistik maskanlari, Chimyon tabiati, tarixiy meros va sayohat imkoniyatlarini kashf eting."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+    />
+    <link rel="icon" href="images/logo.png" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:wght@600;700&family=Manrope:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header" id="header">
+      <div class="wrap nav">
+        <a href="#home" class="brand" aria-label="Bosh sahifa">
+          <img
+            src="images/logo.png"
+            alt="Farg‘ona tumani logotipi"
+            class="site-logo"
+            data-logo
+          />
+          <span>FARG‘ONA TUMANI</span>
+        </a>
+        <button
+          class="burger"
+          id="burger"
+          aria-label="Menyuni ochish"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <i></i><i></i><i></i>
+        </button>
+        <nav id="menu" class="menu" aria-label="Asosiy menyu">
+          <a href="#home">Bosh sahifa</a><a href="#about">Farg‘ona haqida</a
+          ><a href="#places">Maskanlar</a> <a href="#chimyon">Chimyon</a
+          ><a href="#history">Tarix</a><a href="#nature">Tabiat</a>
+          <a href="#map">Xarita</a><a href="#gallery">Galereya</a
+          ><a href="#plan">Sayohat</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <img
+          class="hero-img"
+          referrerpolicy="no-referrer"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+          alt="Chimyon tog‘i manzarasi"
+          loading="eager"
+          fetchpriority="high"
+        />
+        <div class="hero-in wrap">
+          <h1>FARG‘ONA TUMANI</h1>
+          <p class="slogan">“Tarix va tabiat uyg‘unligi”</p>
+          <p class="sub">“Go‘zal maskan sizni kutmoqda!”</p>
+          <div class="btns">
+            <a class="btn gold" href="#places">Maskanlarni ko‘rish</a
+            ><a class="btn ghost" href="#plan">Sayohatni rejalash</a>
+          </div>
+          <a class="phone-hero" href="tel:+998509551586"
+            ><svg
+              viewBox="0 0 24 24"
+              width="20"
+              height="20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"
+              /></svg
+            >+998 50 955 1586</a
+          >
+        </div>
+      </section>
+
+      <section class="sec wrap about" id="about">
+        <div class="reveal">
+          <h2>Farg‘ona tumani haqida</h2>
+          <p>
+            Farg‘ona tumani — Farg‘ona viloyatidagi tog‘lari, tarixiy va ziyorat
+            maskanlari bilan sayyohlarni kutib oladigan hudud.
+          </p>
+          <p>
+            Bu yerda Chimyon va Vodil manzaralari, Huvaydo, Satkak Azizlar va
+            Hazrat Ali Shohimardon ziyoratgohlari bilan tanishish mumkin.
+          </p>
+          <a class="btn green" href="#places">Maskanlarni ko‘rish</a>
+        </div>
+        <div class="about-img reveal">
+          <figure class="big">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Vodil_%28Fergana_district%29.jpg"
+              alt="Vodil, Farg‘ona tumani tog‘ manzarasi"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="small">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://storage.kun.uz/source/thumbnails/_medium/7/fsRzRgt6ZWnk1VAZ1CiLFyB3McrI90cp_medium.jpg"
+              alt="Vodil qishlog‘i va tog‘ manzarasi"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+      </section>
+
+      <section class="sec light" id="places">
+        <div class="wrap">
+          <h2 class="center">Sayohat uchun maskanlar</h2>
+          <div class="grid cards">
+            <article class="card reveal">
+              <figure>
+                <img
+                  referrerpolicy="no-referrer"
+                  src="https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format%3Dwebp%2Cw%3D720/QwRY54Li1HMwD7oNfpHLCDPwdNT7ZG2UKRqwzt4u4J"
+                  alt="Chimyon"
+                  loading="lazy"
+                /><span class="badge">TABIAT</span>
+              </figure>
+              <div>
+                <h3>Chimyon</h3>
+                <p>Tog‘li tabiat va toza havo maskani.</p>
+                <small>Farg‘ona tumani</small
+                ><a class="btn green sm" href="#chimyon">Batafsil</a>
+              </div>
+            </article>
+            <article class="card reveal">
+              <figure>
+                <img
+                  referrerpolicy="no-referrer"
+                  src="https://ferganatourism.uz/thumb/2/IR0M12R7T9OUlTsqrjXnzw/580r450/d/img_3230.jpg"
+                  alt="Huvaydo ziyoratgohi"
+                  loading="lazy"
+                /><span class="badge">ZIYORAT</span>
+              </figure>
+              <div>
+                <h3>Huvaydo ziyoratgohi</h3>
+                <p>Tarixiy meros va ziyorat maskani.</p>
+                <small>Farg‘ona tumani</small
+                ><a class="btn green sm" href="#history">Batafsil</a>
+              </div>
+            </article>
+            <article class="card reveal">
+              <figure>
+                <img
+                  referrerpolicy="no-referrer"
+                  src="https://cdn.uza.uz/2026/04/23/14/10/0z8H6NDjFY8NrNAytgTE0fkaKoRuyswf_normal.jpg"
+                  alt="Satkak Azizlar ziyoratgohi"
+                  loading="lazy"
+                /><span class="badge">ZIYORAT</span>
+              </figure>
+              <div>
+                <h3>Satkak Azizlar ziyoratgohi</h3>
+                <p>Ziyoratchilar tashrif buyuradigan maskan.</p>
+                <small>Farg‘ona tumani</small
+                ><a class="btn green sm" href="#gallery">Batafsil</a>
+              </div>
+            </article>
+            <article class="card reveal">
+              <figure>
+                <img
+                  referrerpolicy="no-referrer"
+                  src="https://commons.wikimedia.org/wiki/Special:FilePath/Hazrat_Ali_Shohimardon_ziyoratgohi.jpg?width=1200"
+                  alt="Hazrat Ali Shohimardon ziyoratgohi"
+                  loading="lazy"
+                /><span class="badge">ZIYORAT</span>
+              </figure>
+              <div>
+                <h3>Hazrat Ali Shohimardon</h3>
+                <p>Mashhur ziyoratgoh.</p>
+                <small>Farg‘ona viloyati</small
+                ><a class="btn green sm" href="#gallery">Batafsil</a>
+              </div>
+            </article>
+            <article class="card reveal">
+              <figure>
+                <img
+                  referrerpolicy="no-referrer"
+                  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9koMAM4eQ0Sb1Vt-EPMhgTIVOAD9nrbD7DPc9VYR05w&s=10"
+                  alt="Xo‘jam Podshoh"
+                  loading="lazy"
+                /><span class="badge">ZIYORAT</span>
+              </figure>
+              <div>
+                <h3>Xo‘jam Podshoh</h3>
+                <p>Mashhur ziyorat maskani.</p>
+                <small>Farg‘ona tumani</small
+                ><a class="btn green sm" href="#contact">Batafsil</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec wrap chimyon" id="chimyon">
+        <div class="chim-img reveal">
+          <figure class="big">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+              alt="Chimyon tog‘i"
+              loading="lazy"
+            />
+          </figure>
+          <figure class="small">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://d3fphkxyf5o5bm.cloudfront.net/image-resize/format%3Dwebp%2Cw%3D720/QwRY54Li1HMwD7oNfpHLCDPwdNT7ZG2UKRqwzt4u4J"
+              alt="Chimyon manzarasi"
+              loading="lazy"
+            />
+          </figure>
+        </div>
+        <div class="reveal">
+          <h2>CHIMYON</h2>
+          <p class="lead">“Farg‘ona tumanining betakror tabiati”</p>
+          <a class="btn gold" href="#nature">Chimyonni kashf etish</a>
+        </div>
+      </section>
+
+      <section class="sec light" id="history">
+        <div class="wrap history reveal">
+          <figure>
+            <img
+              referrerpolicy="no-referrer"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwLKRg4fcgMoMp1UAC_SyjY46FIxPDC0p10LXYV8lD0yBnZe1iD3XWfrk&s=10"
+              alt="Huvaydo ziyoratgohi mavzoleyi"
+              loading="lazy"
+            />
+          </figure>
+          <div>
+            <h2>Tarix va meros</h2>
+            <h3>Huvaydo ziyoratgohi</h3>
+            <p>Tarixiy meros va ziyorat an’anasini o‘zida saqlagan maskan.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec wrap" id="nature">
+        <h2 class="center">Tabiat mo‘jizalari</h2>
+        <div class="grid nat">
+          <figure class="vis reveal">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Vodil_%28Fergana_district%29.jpg"
+              alt="Tog‘lar"
+              loading="lazy"
+            />
+            <figcaption>Tog‘lar</figcaption>
+          </figure>
+          <figure class="vis reveal">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+              alt="Chimyon tabiati"
+              loading="lazy"
+            />
+            <figcaption>Chimyon tabiati</figcaption>
+          </figure>
+          <figure class="vis reveal">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://storage.kun.uz/source/thumbnails/_medium/7/fsRzRgt6ZWnk1VAZ1CiLFyB3McrI90cp_medium.jpg"
+              alt="Vodil manzaralari"
+              loading="lazy"
+            />
+            <figcaption>Vodil manzaralari</figcaption>
+          </figure>
+          <figure class="vis reveal">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5VpkhrMWgn7ABskEM4UdoNn7p3ctTJFEHa4Id3jx4w&s=10"
+              alt="Yashil vodiylar"
+              loading="lazy"
+            />
+            <figcaption>Yashil vodiylar</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <section class="sec light" id="map">
+        <div class="wrap">
+          <h2 class="center">Farg‘ona tumanini xaritada kashf eting</h2>
+          <div
+            id="leaflet"
+            role="application"
+            aria-label="Interaktiv xarita"
+          ></div>
+          <p class="note" id="mapnote"></p>
+        </div>
+      </section>
+
+      <section class="sec wrap" id="gallery">
+        <h2 class="center">Farg‘ona tumani galereyasi</h2>
+        <div class="gallery" id="galleryGrid">
+          <button class="g" data-t="Chimyon">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+              alt="Chimyon tog‘i"
+              loading="lazy"
+            /><span>Chimyon</span>
+          </button>
+          <button class="g" data-t="Vodil">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Vodil_%28Fergana_district%29.jpg"
+              alt="Vodil tog‘ manzarasi"
+              loading="lazy"
+            /><span>Vodil</span>
+          </button>
+          <button class="g" data-t="Vodil qishlog‘i">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://storage.kun.uz/source/thumbnails/_medium/7/fsRzRgt6ZWnk1VAZ1CiLFyB3McrI90cp_medium.jpg"
+              alt="Vodil qishlog‘i"
+              loading="lazy"
+            /><span>Vodil qishlog‘i</span>
+          </button>
+          <button class="g" data-t="Huvaydo">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://ferganatourism.uz/thumb/2/IR0M12R7T9OUlTsqrjXnzw/580r450/d/img_3230.jpg"
+              alt="Huvaydo ziyoratgohi"
+              loading="lazy"
+            /><span>Huvaydo</span>
+          </button>
+          <button class="g" data-t="Huvaydo mavzoleyi">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://upload.wikimedia.org/wikipedia/commons/0/0c/%D0%9C%D0%B0%D0%B2%D0%B7%D0%BE%D0%BB%D0%B5%D0%B9_%D0%A5%D1%83%D0%B2%D0%B0%D0%B9%D0%B4%D0%BE.jpg"
+              alt="Huvaydo mavzoleyi"
+              loading="lazy"
+            /><span>Huvaydo mavzoleyi</span>
+          </button>
+          <button class="g" data-t="Satkak Azizlar">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://cdn.uza.uz/2026/04/23/14/10/0z8H6NDjFY8NrNAytgTE0fkaKoRuyswf_normal.jpg"
+              alt="Satkak Azizlar ziyoratgohi"
+              loading="lazy"
+            /><span>Satkak Aziz</span>
+          </button>
+          <button class="g" data-t="Hazrat Ali Shohimardon">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://commons.wikimedia.org/wiki/Special:FilePath/Hazrat_Ali_Shohimardon_ziyoratgohi.jpg?width=1200"
+              alt="Hazrat Ali Shohimardon ziyoratgohi"
+              loading="lazy"
+            /><span>Hazrat Ali Shohimardon</span>
+          </button>
+          <button class="g" data-t="Vodil manzaralari">
+            <img
+              referrerpolicy="no-referrer"
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK5VpkhrMWgn7ABskEM4UdoNn7p3ctTJFEHa4Id3jx4w&s=10"
+              alt="Vodil manzaralari"
+              loading="lazy"
+            /><span>Vodil manzaralari</span>
+          </button>
+        </div>
+      </section>
+
+      <section class="sec light" id="plan">
+        <div class="wrap">
+          <h2 class="center">Sayohatingizni rejalashtiring</h2>
+          <div class="grid plans">
+            <article class="plan reveal">
+              <img
+                referrerpolicy="no-referrer"
+                src="https://upload.wikimedia.org/wikipedia/commons/a/a0/Vodil_%28Fergana_district%29.jpg"
+                alt="1 kunlik sayohat"
+                loading="lazy"
+              />
+              <h3>1 kunlik sayohat</h3>
+            </article>
+            <article class="plan reveal">
+              <img
+                referrerpolicy="no-referrer"
+                src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+                alt="Tabiat sayohati"
+                loading="lazy"
+              />
+              <h3>Tabiat sayohati</h3>
+            </article>
+            <article class="plan reveal">
+              <img
+                referrerpolicy="no-referrer"
+                src="https://ferganatourism.uz/thumb/2/IR0M12R7T9OUlTsqrjXnzw/580r450/d/img_3230.jpg"
+                alt="Ziyorat sayohati"
+                loading="lazy"
+              />
+              <h3>Ziyorat sayohati</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec wrap" id="why">
+        <h2 class="center">Nima uchun Farg‘ona tumani?</h2>
+        <div class="grid why">
+          <div class="w reveal">
+            <span aria-hidden="true">🌿</span>
+            <h3>Tabiiy go‘zallik</h3>
+            <p>Tog‘lar va yashil vodiylar.</p>
+          </div>
+          <div class="w reveal">
+            <span aria-hidden="true">🕌</span>
+            <h3>Tarix va meros</h3>
+            <p>Ziyoratgohlar va tarixiy maskanlar.</p>
+          </div>
+          <div class="w reveal">
+            <span aria-hidden="true">⛰️</span>
+            <h3>Chimyon</h3>
+            <p>Betakror tog‘ manzarasi.</p>
+          </div>
+          <div class="w reveal">
+            <span aria-hidden="true">🧭</span>
+            <h3>Sayohat</h3>
+            <p>Bir kunlik va uzoqroq marshrutlar.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="sec wrap" id="contact">
+        <h2 class="center">Biz bilan bog‘laning</h2>
+        <div class="contact reveal">
+          <p>
+            <strong>Manzil:</strong><br />Farg‘ona tumani<br />Farg‘ona
+            viloyati<br />O‘zbekiston
+          </p>
+          <a class="phone" href="tel:+998509551586"
+            ><svg
+              viewBox="0 0 24 24"
+              width="22"
+              height="22"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                d="M6.6 10.8a15 15 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11 11 0 0 0 3.6.6 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.250.2 2.450.6 3.600a1 1 0 0 1-.25 1z"
+              /></svg
+            >+998 50 955 1586</a
+          >
+        </div>
+      </section>
+
+      <section class="cta">
+        <img
+          referrerpolicy="no-referrer"
+          src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Chimyon_tog%27i.jpg"
+          alt="Chimyon tog‘i"
+          loading="lazy"
+        />
+        <div class="wrap">
+          <h2>Farg‘ona tumanini o‘z ko‘zingiz bilan kashf eting.</h2>
+          <p>Sayohatingizni bugun boshlang.</p>
+          <a class="btn gold" href="#places">Maskanlarni ko‘rish</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap fgrid">
+        <div class="fbrand">
+          <span class="logo-box"
+            ><img
+              src="images/logo.png"
+              alt="Farg‘ona tumani logotipi"
+              class="site-logo"
+              data-logo /></span
+          ><strong>FARG‘ONA TUMANI</strong><em>“Tarix va tabiat uyg‘unligi”</em>
+        </div>
+        <a class="phone" href="tel:+998509551586">+998 50 955 1586</a>
+      </div>
+      <div class="wrap fbot">
+        <span>© 2026 Farg‘ona tumani</span><span>By Nozimjon Tojaliyev</span>
+      </div>
+    </footer>
+
+    <div
+      class="lb"
+      id="lb"
+      role="dialog"
+      aria-modal="true"
+      aria-label="Rasm ko‘rish oynasi"
+      hidden
+    >
+      <button class="lb-x" id="lbX" aria-label="Yopish">×</button>
+      <button class="lb-n prev" id="lbP" aria-label="Oldingi">‹</button>
+      <figure>
+        <img id="lbImg" src="" alt="" />
+        <figcaption id="lbCap"></figcaption>
+      </figure>
+      <button class="lb-n next" id="lbN" aria-label="Keyingi">›</button>
+    </div>
+  </body>
+</html>
